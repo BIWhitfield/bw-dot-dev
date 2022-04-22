@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+.app-container {
+    box-sizing: border-box;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+	border: 20px solid rgb(255, 254, 244);
+	background: linear-gradient(0deg, #072f2ecc, #fffce277), url(./bwDotDev/assets/images/graf-02-min.png) no-repeat center center;
+	background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.circle {
+    width: 80vh;
+	height: 80vh;
+	border-radius: 50%;
+	background: linear-gradient(0deg, #c9c9c9cc, #fbfbf763), url(./bwDotDev/assets/images/prof-03.png) no-repeat center center;
+	position: absolute;
+	top: 7vh;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+	box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tri1 {
+    clip-path: polygon(0 0, 100% 0, 50% 
+	100%);
+	width: 100vh;
+	height: 88vh;
+	background: url(./bwDotDev/assets/images/graf-01.png) 
+	no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	top: 10vh;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+	filter: hue-rotate(310deg) contrast(140%);
+	opacity: 0.15;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tri2 {
+    clip-path: polygon(50% 1%, 0% 100%, 11% 100%, 49% 21%, 49% 21%, 86% 92%, 5% 92%, 9% 100%, 100% 100%, 49% 1%);
+	width: 80vh;
+	height: 70vh;
+	background: #00000040 no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	top: -20vh;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+	filter: hue-rotate(90deg) contrast(140%);
+	opacity: 0.7;
 }
 
-.App-link {
-  color: #61dafb;
+.tri3 {
+    clip-path: polygon(50% 1%, 0% 100%, 11% 100%, 49% 21%, 49% 21%, 86% 92%, 5% 92%, 9% 100%, 100% 100%, 49% 1%);
+	width: 80vh;
+	height: 70vh;
+	background: #00000060 no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	top: 1vh;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+	filter: hue-rotate(90deg) contrast(140%);
+	opacity: 0.7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tri4 {
+    clip-path: polygon(50% 1%, 0% 100%, 11% 100%, 49% 21%, 49% 21%, 86% 92%, 5% 92%, 9% 100%, 100% 100%, 49% 1%);
+	width: 80vh;
+	height: 70vh;
+	background: #00000080 no-repeat center center;
+	background-size: cover;
+	position: absolute;
+	top: 20vh;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+	filter: hue-rotate(90deg) contrast(140%);
+	opacity: 0.7;
 }
+
