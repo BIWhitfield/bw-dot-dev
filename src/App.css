@@ -9,11 +9,40 @@
 	background-size: cover;
 }
 
+
+header {
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	z-index: 10;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	background: transparent;
+	justify-content: right;
+	align-items: center;
+}
+
+header button {
+	background-color: transparent;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+header img {
+	height: 20px;
+	width: 20px;
+}
+
+
+
 .circle {
     width: 80vh;
 	height: 80vh;
 	border-radius: 50%;
 	background: linear-gradient(0deg, #c9c9c9cc, #fbfbf763), url(./bwDotDev/assets/images/prof-03.png) no-repeat center center;
+	background-size: cover;
 	position: absolute;
 	top: 7vh;
 	left: 50%;
