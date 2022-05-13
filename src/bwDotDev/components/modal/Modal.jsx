@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import './modalStyles.css';
 
-function Modal({ children, isOpen, handleClose }) {
-
+function Modal({ children, title, isOpen, handleClose }) {
   useEffect(() => {
     const closeOnEscapeKey = (e) => (e.key === 'Escape' ? handleClose() : null);
     document.body.addEventListener('keydown', closeOnEscapeKey);
@@ -19,9 +18,12 @@ function Modal({ children, isOpen, handleClose }) {
   return (
     <div className={`modal`}>
       <div className={`modal-content`}>
+      <div className='modal-header'>
+        {title ? <h6>{title}</h6> : <div />}
         <button onClick={handleModal} className='close-btn'>
           Close
         </button>
+      </div>
         <div className='modal-children'>{children}</div>
       </div>
     </div>

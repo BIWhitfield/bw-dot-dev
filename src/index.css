@@ -6,7 +6,7 @@ html {
 	height: 100vh;
 	overflow-x: hidden;
 	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
 
 code {

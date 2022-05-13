@@ -12,17 +12,33 @@
   padding: 40px 20px 20px;
 }
 
+.modal h6 {
+  margin: 0;
+  margin-left: 20px;
+  color:rgba(0, 0, 0, 0.6);
+  
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
 .close-btn {
   align-self: flex-end;
   border: none;
   background-color: transparent;
   cursor: pointer;
   padding: 10px;
+  margin-right: 10px;
 }
 
 .modal-content {
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
   background-color: #f1f1f1;
   color: #fff;
   display: flex;
@@ -50,7 +66,7 @@
   }
   to {
     opacity: 100%;
-    width: 70%;
+    width: 90%;
     /* height: 70% */
   }
 }
