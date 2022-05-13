@@ -47,3 +47,16 @@
     height: 35px;
 }
 
+.loading-text {
+    animation: pulse 0.5s infinite linear;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+

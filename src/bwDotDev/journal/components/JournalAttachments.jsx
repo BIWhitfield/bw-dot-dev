@@ -1,9 +1,7 @@
 import React from 'react'
 
-function JournalAttachments() {
-  return (
-    <div>JournalAttachments</div>
-  )
+function JournalAttachments({ handleFieldChange }) {
+  return <div>JournalAttachments</div>;
 }
 
 export default JournalAttachments

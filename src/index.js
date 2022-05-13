@@ -9,7 +9,8 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 
 import './index.css';
-console.log('CONFIG', config)
+import ContextProvider from './bwDotDev/context';
+
 Amplify.configure({
   Auth: {
     mandatorySignIn: true,
@@ -38,7 +39,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <ContextProvider>
+        <App />
+      </ContextProvider>
     </Router>
   </React.StrictMode>
 );

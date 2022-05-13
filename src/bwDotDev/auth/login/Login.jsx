@@ -1,24 +1,38 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Auth } from 'aws-amplify';
+
 import Modal from '../../components/modal/Modal';
 
+import { AuthContext } from '../../context/AuthContext';
+import { onError } from '../../lib/error-handling/onError';
+
 import './login.css';
+import { useFormFields } from '../../lib/hooks/hooksLib';
 
 function Login({ handleClose, isOpen }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+   const [fields, handleFieldChange] = useFormFields({
+     email: '',
+     password: '',
+   });
+  const [isLoading, setIsLoading] = useState(false);
+  const { authDispatch } = useContext(AuthContext);
 
   function validateForm() {
-    return email.length > 0 && password.length > 0;
+    return fields.email.length > 0 && fields.password.length > 0;
   }
 
   async function handleSubmit(event) {
     event.preventDefault();
+    setIsLoading(true);
+
     try {
-      await Auth.signIn(email, password);
-      alert('Logged in');
+      await Auth.signIn(fields.email, fields.password);
+      authDispatch({ type: 'SET_USER_LOGGED_IN' });
+      setIsLoading(false);
+      handleClose()
     } catch (e) {
-      alert(e.message);
+      onError(e);
+      setIsLoading(false)
     }
   }
   return (
@@ -29,21 +43,27 @@ function Login({ handleClose, isOpen }) {
           <label htmlFor='email'>Email</label>
           <input
             autoFocus
+            id='email'
             name='email'
             type='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={fields.email}
+            onChange={handleFieldChange}
           />
           <label htmlFor='password'>Password</label>
           <input
+            id='password'
             name='password'
             type='password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={fields.password}
+            onChange={handleFieldChange}
           />
         </div>
         <button type='submit' disabled={!validateForm()} onClick={handleSubmit}>
-          Log In
+          {isLoading ? (
+            <p className='loading-text'>Loading...</p>
+          ) : (
+            <p>Log In</p>
+          )}
         </button>
       </form>
     </Modal>
