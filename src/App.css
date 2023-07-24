@@ -4,8 +4,8 @@
 	height: 100vh;
 	overflow: hidden;
 	transform: translate3d(0, 0, 0);
-	border: 20px solid rgb(255, 254, 244);
-	background: linear-gradient(0deg, #072f2ecc, #fffce277), url(./bwDotDev/assets/images/graf-02-min.png) no-repeat center center;
+	border: 20px solid rgb(252, 249, 226);
+	background: linear-gradient(0deg, #072f2ecc, #fffce277), url(./bwDotDev/assets/images/graf-01.png) no-repeat center center;
 	background-size: cover;
 }
 
@@ -13,7 +13,7 @@
     width: 80vh;
 	height: 80vh;
 	border-radius: 50%;
-	background: linear-gradient(0deg, #c9c9c9cc, #fbfbf763), url(./bwDotDev/assets/images/prof-03.png) no-repeat center center;
+	/* background: linear-gradient(0deg, #c9c9c9cc, #fbfbf763), url(./bwDotDev/assets/images/prof-03.png) no-repeat center center; */
 	position: absolute;
 	top: 7vh;
 	left: 50%;
@@ -27,8 +27,6 @@
 	100%);
 	width: 100vh;
 	height: 88vh;
-	background: url(./bwDotDev/assets/images/graf-01.png) 
-	no-repeat center center;
 	background-size: cover;
 	position: absolute;
 	top: 10vh;
