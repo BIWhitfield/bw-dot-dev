@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router";
 import Github from "../icons/GIthub";
 import Instagram from "../icons/Instagram";
 import LinkedIn from "../icons/LinkedIn";
+import Audio from "../icons/Audio";
+
 import "./home.css";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="home-container">
       <h1>Ben Whitfield</h1>
@@ -32,6 +37,9 @@ function Home() {
         >
           <LinkedIn />
         </a>
+        <button className="button-icon" onClick={() => navigate("/audio")}>
+          <Audio />
+        </button>
       </div>
     </div>
   );

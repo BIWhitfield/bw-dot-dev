@@ -11,7 +11,18 @@
   background-color: #00000070;
 }
 
-h1 {
+.button-home {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+ 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+s h1 {
   color: white;
   margin: 0px;
 }
@@ -70,14 +81,15 @@ input {
   background: #23261e !important;
 }
 
-.rhap_current-time, .rhap_time {
+.rhap_current-time,
+.rhap_time {
   color: #302f2f !important;
   font-weight: bold;
 }
 
 .rhap_button-clear {
-    background-color: #d6d4d4 !important;
-    & > svg > path {
-        fill: #000 !important;
-    }
+  background-color: #d6d4d4 !important;
+  & > svg > path {
+    fill: #000 !important;
+  }
 }

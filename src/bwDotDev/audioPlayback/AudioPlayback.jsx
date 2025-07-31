@@ -4,8 +4,11 @@ import AudioPlayer from "react-h5-audio-player";
 
 import "./audioPlayback.css";
 import "react-h5-audio-player/lib/styles.css";
+import { useNavigate } from "react-router";
+import HomeIcon from "../icons/HomeIcon";
 
 function AudioPlayback() {
+  const navigate = useNavigate();
   const playerRef = React.useRef(null);
   const uploadInputRef = React.useRef(null);
 
@@ -34,6 +37,8 @@ function AudioPlayback() {
   return (
     <div className="audio-playback-container">
       <h1>Audio Playback</h1>
+      <button className="button-icon button-home" onClick={() => navigate("/")}><HomeIcon /></button>
+
       <input
         ref={uploadInputRef}
         id="audio-upload"
