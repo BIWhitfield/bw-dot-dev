@@ -1,18 +1,24 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
-
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
 import Home from "../home/Home";
 import AudioPlayback from "../audioPlayback/AudioPlayback";
 
+const _router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Home />} />
+      <Route path="/audio" element={<AudioPlayback />} />
+    </>
+  )
+);
+
 function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/audio" element={<AudioPlayback />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={_router} />;
 }
 
 export default Router;
