@@ -5,8 +5,6 @@ import AudioPlayer from "react-h5-audio-player";
 import "./audioPlayback.css";
 import "react-h5-audio-player/lib/styles.css";
 
-import wizardAudio from "./testAudio/wizard.mp3";
-
 function AudioPlayback() {
   const playerRef = React.useRef(null);
   const uploadInputRef = React.useRef(null);
@@ -44,7 +42,7 @@ function AudioPlayback() {
         onChange={handleUploadFile}
       />
       <button onClick={handleHiddenInputClick}>Upload File</button>
-      <AudioPlayer ref={playerRef} src={wizardAudio} />
+      <AudioPlayer ref={playerRef} />
       <div className="playback-rate-controls">
         <button onClick={() => handlePlaybackRateChange(playbackRate - 0.01)}>
           -
