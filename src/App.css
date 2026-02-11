@@ -1,80 +1,159 @@
 .app-container {
-    box-sizing: border-box;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	transform: translate3d(0, 0, 0);
-	border: 20px solid rgb(252, 249, 226);
-	background: linear-gradient(0deg, #072f2ecc, #fffce277), url(./bwDotDev/assets/images/graf-01.png) no-repeat center center;
-	background-size: cover;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  border: 20px solid rgb(252, 249, 226);
+  /* background:
+    linear-gradient(0deg, #072f2ecc, #fffce277),
+    url(./bwDotDev/assets/images/prof-03.png) no-repeat center center;
+  background-size: cover; */
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(0deg, #072f2ecc, #fffce277);
+} 
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .circle {
-    width: 80vh;
-	height: 80vh;
-	border-radius: 50%;
-	/* background: linear-gradient(0deg, #c9c9c9cc, #fbfbf763), url(./bwDotDev/assets/images/prof-03.png) no-repeat center center; */
-	position: absolute;
-	top: 7vh;
-	left: 50%;
-	transform: translate3d(-50%, 0, 0);
-	box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.3);
+  width: 80vh;
+  height: 80vh;
+  border-radius: 50%;
+  /* background: linear-gradient(0deg, #c9c9c9cc, #fbfbf763), url(./bwDotDev/assets/images/prof-03.png) no-repeat center center; */
+  position: absolute;
+  top: 7vh;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.3);
   opacity: 0.9;
 }
 
 .tri1 {
-    clip-path: polygon(0 0, 100% 0, 50% 
-	100%);
-	width: 100vh;
-	height: 88vh;
-	background-size: cover;
-	position: absolute;
-	top: 10vh;
-	left: 50%;
-	transform: translate3d(-50%, 0, 0);
-	filter: hue-rotate(310deg) contrast(140%);
-	opacity: 0.15;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  width: 100vh;
+  height: 88vh;
+  background-size: cover;
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  filter: hue-rotate(310deg) contrast(140%);
+  opacity: 0.15;
 }
 
 .tri2 {
-    clip-path: polygon(50% 1%, 0% 100%, 11% 100%, 49% 21%, 49% 21%, 86% 92%, 5% 92%, 9% 100%, 100% 100%, 49% 1%);
-	width: 80vh;
-	height: 70vh;
-	background: #00000040 no-repeat center center;
-	background-size: cover;
-	position: absolute;
-	top: -20vh;
-	left: 50%;
-	transform: translate3d(-50%, 0, 0);
-	filter: hue-rotate(90deg) contrast(140%);
-	opacity: 0.7;
+  clip-path: polygon(
+    50% 1%,
+    0% 100%,
+    11% 100%,
+    49% 21%,
+    49% 21%,
+    86% 92%,
+    5% 92%,
+    9% 100%,
+    100% 100%,
+    49% 1%
+  );
+  width: 80vh;
+  height: 70vh;
+  background: #00000040 no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: -20vh;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  filter: hue-rotate(90deg) contrast(140%);
+  opacity: 0.7;
 }
 
 .tri3 {
-    clip-path: polygon(50% 1%, 0% 100%, 11% 100%, 49% 21%, 49% 21%, 86% 92%, 5% 92%, 9% 100%, 100% 100%, 49% 1%);
-	width: 80vh;
-	height: 70vh;
-	background: #00000060 no-repeat center center;
-	background-size: cover;
-	position: absolute;
-	top: 1vh;
-	left: 50%;
-	transform: translate3d(-50%, 0, 0);
-	filter: hue-rotate(90deg) contrast(140%);
-	opacity: 0.7;
+  clip-path: polygon(
+    50% 1%,
+    0% 100%,
+    11% 100%,
+    49% 21%,
+    49% 21%,
+    86% 92%,
+    5% 92%,
+    9% 100%,
+    100% 100%,
+    49% 1%
+  );
+  width: 80vh;
+  height: 70vh;
+  background: #00000060 no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 1vh;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  filter: hue-rotate(90deg) contrast(140%);
+  opacity: 0.7;
 }
 
 .tri4 {
-    clip-path: polygon(50% 1%, 0% 100%, 11% 100%, 49% 21%, 49% 21%, 86% 92%, 5% 92%, 9% 100%, 100% 100%, 49% 1%);
-	width: 80vh;
-	height: 70vh;
-	background: #00000080 no-repeat center center;
-	background-size: cover;
-	position: absolute;
-	top: 20vh;
-	left: 50%;
-	transform: translate3d(-50%, 0, 0);
-	filter: hue-rotate(90deg) contrast(140%);
-	opacity: 0.7;
+  clip-path: polygon(
+    50% 1%,
+    0% 100%,
+    11% 100%,
+    49% 21%,
+    49% 21%,
+    86% 92%,
+    5% 92%,
+    9% 100%,
+    100% 100%,
+    49% 1%
+  );
+  width: 80vh;
+  height: 70vh;
+  background: #00000080 no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  filter: hue-rotate(90deg) contrast(140%);
+  opacity: 0.7;
 }
-

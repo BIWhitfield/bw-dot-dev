@@ -23,7 +23,7 @@ function Home() {
         </a>
 
         <a
-          href="https://www.instagram.com/uptheoldkentroad/"
+          href="https://www.instagram.com/papiermachetes/"
           target="_blank"
           rel="noreferrer"
         >
@@ -37,6 +37,7 @@ function Home() {
         >
           <LinkedIn />
         </a>
+
         <button className="button-icon" onClick={() => navigate("/audio")}>
           <Audio />
         </button>
